@@ -1,7 +1,11 @@
 import math
 
 # x = -2.9
+# y = 2.5
+# z = 2.6
 # print(round(x)) # -3
+# print(round(y)) # 2
+# print(round(z)) # 3
 # print(abs(x)) # 2.9
 
 # Math module - methods
@@ -56,7 +60,7 @@ y = 5.9
 # if len(name) < 3:
 #     print("Please enter more than 3 character")
 # elif len(name) > 50:
-#     print("Please enter more than 50 character")
+#     print("Please enter less than 50 character")
 # else:
 #     print("sounds good")
 
