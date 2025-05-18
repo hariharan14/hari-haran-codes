@@ -1,4 +1,4 @@
-# 2D Arrays
+# TODO: 2D Arrays
 # matrix = [
 #     [1, 2, 3],
 #     [4, 5, 6],
@@ -11,8 +11,8 @@
 #     for i in row:
 #         print(i)
 
-# List Methods
-# n = [5, 4, 3, 5, 2, 3]
+# TODO: List Methods
+# n = [5, 4, 3, 5, 2, 3, 2]
 # n2 = n.copy()
 
 # print(n.append(8)) # usually returns none, but the operation wud have been completed, just print the list again and check
@@ -22,7 +22,7 @@
 # print(n)
 # print(n.index(9))
 
-# n.remove(2) # removes the obj from the list
+# n.remove(2) # removes the obj from the list, if multiple times the obj is present, it removes the 1st occ of the obj
 # print(n)
 
 # n.clear()
@@ -31,7 +31,7 @@
 # n.pop() # removes the last obj
 # print(n)
 
-# print(n.index(5)) # finds index of the obj in the 1st occurrence
+# print(n.index(5)) # finds index of the obj in the 1st occurrence, used to find if the obj is present in the list, if its not there, error comes, so better to use the below 'in' operator
 
 # print(3 in n)
 # print(50 in n)
@@ -77,12 +77,12 @@
 # print(x*y*z)
 
 # Dictionary
-# customer = {
-#     "name": "Hari",
-#     "age": 22,
-#     "Phone": 1234,
-#     # 'age': 22 # key shud be unique in a dict
-# }
+customer = {
+    "name": "Hari",
+    "age": 22,
+    "Phone": 1234,
+    # 'age': 22 # key shud be unique in a dict
+}
 # print(customer["name"])
 # # print(customer["sex"]) #key error
 # # print(customer["Age"]) #key error
@@ -120,6 +120,7 @@
 # TODO: Emoji convertor
 # x = input("> ")
 # x = x.split(" ")
+# print(x)
 # emoji = {
 #     ":)": "😊",
 #     ":(": "😒"
@@ -146,7 +147,7 @@
 #
 # # keyword arguments
 # def parent_names(father, mother): #here father and mother are parameters
-#     print(f"Father name: {father}\nMother name: {mother}")
+#     print(f"Father name: {father}\nMother name: {mother}\n")
 # print("Parental information:")
 # parent_names("Murugesan", "Sarala") # murugesan and sarala are positional arguments
 # parent_names("Sarala", "Murugesan") # wrong way
@@ -160,8 +161,8 @@
 # def square(n):
 #     print(n*n)
 # print(square(2)) #prints value and what the function returns which is None by default
-
-# therefore using return to return something from function instead of None
+#
+# #therefore using return to return something from function instead of None
 # def square(n):
 #     return n*n
 # print(square(3))
