@@ -14,6 +14,6 @@ def find_max(l):
             temp = i
     return temp
 
-def find_max_2(list, range): # we have built-in functions with the same name so avoid naming like this
+def find_max_2(list): # we have built-in functions with the same name so avoid naming like this
     list.sort()
-    return list[range-1]
+    return list[-1]

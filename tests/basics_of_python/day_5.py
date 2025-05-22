@@ -95,8 +95,8 @@
 # for i in range(r):
 #     add = int(input(f"Enter number {i+1}: "))
 #     a.append(add)
-# print(find_max(a))
-# print(find_max_2(a, r))
+# # print(find_max(a))
+# print(find_max_2(a))
 
 # TODO: Packages
 # #1
