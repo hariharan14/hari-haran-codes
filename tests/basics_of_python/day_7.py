@@ -1,3 +1,11 @@
+# TODO: Classes
+# self references the current object
+# class Person:
+#     def __init__(self):
+#         print(id(self))
+#
+# person = Person()
+# print(id(person))
 
 # TODO: Inheritance
 
@@ -174,11 +182,14 @@
 # class Professor(Teacher, Author):
 #     def research(self):
 #         print("Doing research")
+#
+# o = Professor()
+# o.introduce()
 
 
 # TODO: Polymorphism
 
-# run time - The correct sound method is invoked at runtime based on the actual type of the object in the list
+# run time - The correct sound method is invoked at runtime based on the actual type of the object
 # class Animal:
 #     def sound(self):
 #         print("Animal makes sound")
@@ -200,14 +211,14 @@
 #     animal.sound()
 
 # compiler time
-class Calculator:
-    def add(self, a, b=0, c=0):
-        return a + b + c
-
-# Compile-Time Polymorphism (Mimicked using default arguments)
-calc = Calculator()
-print(calc.add(5, 10))  # Two arguments
-print(calc.add(5, 10, 15))  # Three arguments
+# class Calculator:
+#     def add(self, a, b=0, c=0):
+#         return a + b + c
+#
+# # Compile-Time Polymorphism (Mimicked using default arguments)
+# calc = Calculator()
+# print(calc.add(5, 10))  # Two arguments
+# print(calc.add(5, 10, 15))  # Three arguments
 
 
 
@@ -248,7 +259,7 @@ print(calc.add(5, 10, 15))  # Three arguments
 
 # TODO: Operator Overloading
 
-#1
+#1 ----------------------------------------------------------
 
 # class A:
 #     def __init__(self, a):
@@ -367,85 +378,85 @@ print(calc.add(5, 10, 15))  # Three arguments
 
 
 # TODO: Encapsulation
-class Dog:
-    def __init__(self, name, breed, age):
-        self.name = name  # Public attribute
-        self._breed = breed  # Protected attribute
-        self.__age = age  # Private attribute
-
-    # Public method
-    def get_info(self):
-        return f"Name: {self.name}, Breed: {self._breed}, Age: {self.__age}"
-
-    # Getter and Setter for private attribute
-    def get_age(self):
-        return self.__age
-
-    def set_age(self, age):
-        if age > 0:
-            self.__age = age
-        else:
-            print("Invalid age!")
-
-# Example Usage
-dog = Dog("Buddy", "Labrador", 3)
-
-# Accessing public member
-print(dog.name)  # Accessible
-
-# Accessing protected member
-print(dog._breed)  # Accessible but discouraged outside the class
-
-# cant access since Hidden from outside, Getter/SetterMethods to read or update private data
-print(dog.__age)
-
-# Accessing private member using getter
-print(dog.get_age())
-
-# Modifying private member using setter
-dog.set_age(5)
-print(dog.get_info())
+# class Dog:
+#     def __init__(self, name, breed, age):
+#         self.name = name  # Public attribute
+#         self._breed = breed  # Protected attribute
+#         self.__age = age  # Private attribute
+#
+#     # Public method
+#     def get_info(self):
+#         return f"Name: {self.name}, Breed: {self._breed}, Age: {self.__age}"
+#
+#     # Getter and Setter for private attribute
+#     def get_age(self):
+#         return self.__age
+#
+#     def set_age(self, age):
+#         if age > 0:
+#             self.__age = age
+#         else:
+#             print("Invalid age!")
+#
+# # Example Usage
+# dog = Dog("Buddy", "Labrador", 3)
+#
+# # Accessing public member
+# print(dog.name)  # Accessible
+#
+# # Accessing protected member
+# print(dog._breed)  # Accessible but discouraged outside the class
+#
+# # cant access since Hidden from outside, Getter/SetterMethods to read or update private data
+# print(dog.__age)
+#
+# # Accessing private member using getter
+# print(dog.get_age())
+#
+# # Modifying private member using setter
+# dog.set_age(5)
+# print(dog.get_info())
 
 #2
-class Student:
-    def __init__(self, name, grade):
-        self.__name = name       # private variable
-        self.__grade = grade     # private variable
-
-    # Getter for name
-    def get_name(self):
-        return self.__name
-
-    # Setter for name
-    def set_name(self, new_name):
-        if isinstance(new_name, str) and new_name != "":
-            self.__name = new_name
-        else:
-            print("Invalid name!")
-
-    # Getter for grade
-    def get_grade(self):
-        return self.__grade
-
-    # Setter for grade
-    def set_grade(self, new_grade):
-        if 0 <= new_grade <= 100:
-            self.__grade = new_grade
-        else:
-            print("Invalid grade! Must be between 0 and 100.")
-
-s = Student("Alice", 85)
-
-print(s.get_name())    # ✅ Alice
-print(s.get_grade())   # ✅ 85
-
-s.set_name("Bob")      # ✅ Changing name
-s.set_grade(95)        # ✅ Changing grade
-
-print(s.get_name())    # ✅ Bob
-print(s.get_grade())   # ✅ 95
-
-s.set_grade(120)       # ❌ Invalid grade
+# class Student:
+#     def __init__(self, name, grade):
+#         self.__name = name       # private variable
+#         self.__grade = grade     # private variable
+#
+#     # Getter for name
+#     def get_name(self):
+#         return self.__name
+#
+#     # Setter for name
+#     def set_name(self, new_name):
+#         if isinstance(new_name, str) and new_name != "":
+#             self.__name = new_name
+#         else:
+#             print("Invalid name!")
+#
+#     # Getter for grade
+#     def get_grade(self):
+#         return self.__grade
+#
+#     # Setter for grade
+#     def set_grade(self,  new_grade):
+#         if 0 <= new_grade <= 100:
+#             self.__grade = new_grade
+#         else:
+#             print("Invalid grade! Must be between 0 and 100.")
+#
+# s = Student("Alice", 85)
+#
+# print(s.get_name())    # ✅ Alice
+# print(s.get_grade())   # ✅ 85
+#
+# s.set_name("Bob")      # ✅ Changing name
+# s.set_grade(95)        # ✅ Changing grade
+#
+# print(s.get_name())    # ✅ Bob
+# print(s.get_grade())   # ✅ 95
+#
+# s.set_grade(120)       # ❌ Invalid grade
 
 # TODO: Abstraction
 # Import required modules
