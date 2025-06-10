@@ -94,7 +94,7 @@ time.sleep(2)
 # dropdown opened, and getting the options details in a list
 l = driver.find_elements(AppiumBy.XPATH, '//android.widget.CheckedTextView[@resource_id="android:id/text1"]')
 time.sleep(2)
-print(len(l)) # 8 - dropdwon options
+print(len(l)) # 8 - dropdown options
 for e in l:
     if e.text == "Python":
         e.click()
